@@ -150,7 +150,7 @@ window.addEventListener('load', () => {
 
     let counter = 0;
     const target = 100;
-    const duration = 200; 
+    const duration = 1500; 
     const intervalTime = duration / target;
 
     const counterInterval = setInterval(() => {

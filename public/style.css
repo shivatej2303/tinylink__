@@ -1,0 +1,270 @@
+
+
+/* 1. Loader Styles*/
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader-content {
+    font-size: 5rem;
+    color: #46d244; 
+    font-weight: 800;
+    font-family: sans-serif;
+} 
+
+/* 2. Main Layout & Dashboard Page */
+
+.dashboard-page {
+    background-color: #121212; 
+    color: #e0e0e0; 
+    font-family: sans-serif;
+    size-adjust: cover;
+    min-height: 100vh;
+}
+.dashboard-container {
+    max-width: 56rem; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+}
+
+.dashboard-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.dashboard-title {
+    font-size: 2.25rem; 
+    line-height: 2.5rem;
+    font-weight: 800;
+    color: #46d244; 
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+    color: #a0a0a0; 
+}
+
+/* 3. URL Shortening Form*/
+.form-card {
+    background-color: #1e1e1e; /* Dark component background */
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #333;
+    margin-bottom: 2.5rem;
+    box-shadow: none; /* Remove shadow on dark background */
+}
+
+.shorten-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: #46d244;
+    border-radius: 10px;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem; 
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #e0e0e0; 
+    margin-bottom: 0.25rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: bold;
+    font-size: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin-right: 20px;
+}
+.form-input:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #46d244; 
+    border-color: #46d244;
+
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; 
+}
+
+@media (min-width: 640px) { 
+    .form-row { flex-wrap: nowrap; }
+}
+
+.form-group-thirds { width: 33.333333%; }
+.form-group-two-thirds { width: 66.666667%; display: flex; align-items: flex-end; }
+
+.form-helper-text {
+    font-size: 0.75rem; 
+    line-height: 1rem;
+    color: #9ca3af; 
+    margin-top: 0.25rem;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #46d244; 
+    color: #121212; 
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 34px;
+}
+.submit-button:hover {
+    background-color: #3ab03a; 
+}
+
+.form-message {
+    text-align: center;
+    font-size: 0.875rem; /* sm */
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+/* 4. Links Table*/
+.links-table-card {
+    background-color: #1e1e1e; 
+    border-radius: 0.75rem;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f3f4f6; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.25rem; 
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #e0e0e0; 
+}
+
+.refresh-button {
+    font-size: 0.875rem; 
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #121212; 
+    background-color: #46d244; 
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    box-shadow: none;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+.refresh-button:hover {
+    background-color: #3ab03a; 
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.links-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.links-table thead tr {
+    background-color: #46d244; 
+    color: #121212; 
+    font-size: 0.875rem; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.links-table th, .links-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.links-table tbody {
+    font-size: 0.875rem;
+    color: #e0e0e0; 
+}
+
+.links-table tbody tr:hover {
+    background-color: #2a2a2a; 
+}
+
+.links-table .action-btn {
+    font-size: 0.75rem; 
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+    padding: 0; 
+}
+
+.links-table .action-btn + .action-btn {
+    margin-left: 0.5rem; 
+}
+
+.links-table .stats-btn {
+    color: #1d4ed8; 
+    background-color: #dbeafe; 
+    padding: 0.25rem 0.75rem; 
+}
+.links-table .stats-btn:hover { background-color: #bfdbfe;  }
+
+.icon-btn {
+    text-indent: -9999px; 
+    width: 2rem; 
+    height: 2rem; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem; 
+    border: none;
+}
+
+.links-table .delete-btn {
+    background-color: #46d244; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23121212" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0v-6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg>');
+}
+.links-table .delete-btn:hover { background-color: #3ab03a;  }
+
+.links-table .copy-btn {
+    background-color: #46d244; 
+   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzEyMTIxMiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDJhMiAyIDAgMCAxIDItMmgyYTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEgMSAySDZhMiAyIDAgMCAxLTItMlYyWm0yLTFhMSAxIDAgMCAwLTEgMXY4YTEgMSAwIDAgMCAxIDFoOGExIDEgMCAwIDAgMS0xVjJhMSAxIDAgMCAwLTEtMUg2Wk0yIDVhMSAxIDAgMCAwLTEgMXY4YTEgMSAwIDAgMCAxIDFoOGExIDEgMCAwIDAgMS0xdi0xaDF2MWEyIDIgMCAwIDEtMiAySDJhMiAyIDAgMCAxLTItMlY2YTIgMiAwIDAgMSAyLTJoMXYxSDJaIi8+PC9zdmc+');
+}
+.links-table .copy-btn:hover { background-color: #3ab03a; }
+
+.links-table .placeholder-row td {
+    padding: 1.5rem;
+    text-align: center;
+    color: #777; 
+}
+
+.links-table tbody td:first-child a {
+    color: #46d244; 
+    text-decoration: none; 
+}

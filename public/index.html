@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyLink - URL Shortener</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dashboard-page" style="background-image: url(backGround.jpg);">
+  <div class="layout">
+     <div class="dashboard-container">
+       <!-- Header -->
+        <header class="dashboard-header">
+            <h1 class="dashboard-title">Tiny🔗Link</h1>
+            <p class="dashboard-subtitle">Shorten your URLs and track who clicks them.</p>
+        </header>
+
+        <!-- Input Section -->
+       <div class="form-card">
+        <form id="shortenForm" class="shorten-form">
+    
+         <div class="form-group">
+         <label for="urlInput" class="form-label">Long URL</label>
+         <input type="url" id="urlInput"  name="original_url" placeholder="https://example.com/very-long-url..." required class="form-input" autocomplete="url"/>
+        </div>
+
+        <div class="form-row">
+        <div class="form-group-thirds">
+        <label for="codeInput" class="form-label">Custom Code (Optional)</label>
+        <input type="text" id="codeInput" name="custom_code" placeholder="e.g. mylink" minlength="6" maxlength="8"
+          pattern="^[A-Za-z0-9]+$"
+          class="form-input"
+        />
+        <p class="form-helper-text">6-8 alphanumeric characters</p>
+      </div>
+
+      <div class="form-group-two-thirds">
+        <button type="submit" class="submit-button">
+          Shorten URL
+        </button>
+      </div>
+
+      <p id="message" class="form-message hidden" role="alert" aria-live="polite"></p>
+      </form>
+    </div>
+        <div id="loader">
+    <div id="loader-content">0</div>
+  </div>
+
+
+    <!-- Dashboard Table -->
+    <div class="links-table-card">
+        <div class="card-header">
+            <h2 class="card-title">Your Links</h2>
+            <button onclick="fetchLinks()" class="refresh-button">Refresh List</button>
+        </div>
+        
+        <div class="table-wrapper">
+            <table class="links-table">
+                <thead>
+                    <tr>
+                        <th>Short Link</th>
+                        <th>Original URL</th>
+                        <th style="text-align: center;">Clicks</th>
+                        <th>Last Clicked</th>
+                        <th style="text-align: right;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="linksTable">
+                    <!-- Rows will be injected here by script.js -->
+                    <tr class="placeholder-row">
+                        <td colspan="5">Loading links...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>

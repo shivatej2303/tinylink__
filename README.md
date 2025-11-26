@@ -39,6 +39,73 @@ Live demo: https://tinylink-seven-iota.vercel.app/
 - Git & GitHub for version control
 
 ---
+## 🚀 Run Locally
+
+Follow these steps to run the TinyLink project on your local machine.
+
+1. Clone the repository:
+git clone https://github.com/shivatej2303/tinylink__.git
+cd tinylink__
+
+2. Install dependencies:
+npm install
+
+3. Create a .env file in the project root:
+MONGODB_URI=<your-mongodb-connection-string>
+BASE_URL=http://localhost:3000
+PORT=3000
+
+4. Start the server:
+npm run dev
+(or)
+node server.js
+
+Expected output:
+Server running on port 3000
+Connected to MongoDB...
+
+5. Open the app in your browser:
+http://localhost:3000
+
+6. Test the API endpoints:
+
+Create a short URL:
+POST http://localhost:3000/api/shorten
+Body:
+{
+  "originalUrl": "https://google.com"
+}
+
+Redirect:
+http://localhost:3000/<shortCode>
+
+Analytics:
+GET http://localhost:3000/api/stats/<shortCode>
+
+------------------------------
+
+## 🧰 Common Issues & Fixes
+
+Error: MONGODB_URI not defined
+Fix: Create a valid .env file with the correct MongoDB connection string.
+
+Error: npm.ps1 cannot be loaded
+Fix (PowerShell):
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Error: CORS / Fetch issues
+Fix: Ensure BASE_URL in .env matches your frontend requests.
+
+------------------------------
+
+## ✔️ Summary
+To run locally:
+git clone
+npm install
+create .env
+npm run dev
+open in browser at http://localhost:3000
+
 
 ## 📂 Project Structure
 

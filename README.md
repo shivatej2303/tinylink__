@@ -24,6 +24,7 @@ Live demo: https://tinylink-seven-iota.vercel.app/
 **Frontend**
 - HTML5, CSS3
 - Vanilla JavaScript (ES6+)
+- DOM Manipulation
 - Fetch API for REST calls
 - Responsive layout (no frontend framework)
 

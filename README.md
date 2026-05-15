@@ -1,4 +1,4 @@
-# TinyLink – Minimal URL Shortener with Click Analytics
+# TinyLink –  URL Shortener with Click Analytics
 
 TinyLink is a lightweight URL shortener built with **Node.js**, **Express**, and **MongoDB**, with a **vanilla JavaScript** frontend.  
 It lets users generate compact short links, handles fast redirection, and tracks basic engagement metrics like click counts and timestamps.
